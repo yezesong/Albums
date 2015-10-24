@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.magcomm.albums.AlbumsLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/iv_item_staggered_layout"
+    style="@style/matchwrap"
+    android:layout_margin="5dp"
+    android:padding="5dp">
+
+    <!--<ImageView
+        android:id="@+id/iv_item_staggered_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/staggered_holder" />-->
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_item_staggered_icon"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:roundBottomLeft="false"
+        fresco:roundBottomRight="false"
+        fresco:roundedCornerRadius="5dp"
+        fresco:roundingBorderColor="#FC6853"
+        fresco:roundingBorderWidth="5dp" />
+
+    <TextView
+        android:id="@+id/tv_item_staggered_desc"
+        style="@style/matchwrap"
+        android:layout_gravity="bottom"
+        android:background="#99cccccc"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="@string/tv_item_staggered_desc"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+</com.android.magcomm.albums.AlbumsLayout>

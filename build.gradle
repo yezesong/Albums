@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.android.magcomm.albums"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.squareup.retrofit:retrofit:1.6.0'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'cn.bingoogolapple:bga-banner:2.0.3@aar'
+    compile 'cn.bingoogolapple:bga-refreshlayout:1.0.7@aar'
+    compile 'cn.bingoogolapple:bga-adapter:1.0.5@aar'
+    compile 'cn.bingoogolapple:bga-swipeitemlayout:1.0.2@aar'
+
+    compile 'com.facebook.fresco:fresco:0.8.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+}

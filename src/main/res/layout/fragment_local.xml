@@ -1,0 +1,21 @@
+<cn.bingoogolapple.refreshlayout.BGARefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_gridview_refresh"
+    style="@style/matchmatch"
+    android:background="@color/color_black">
+
+    <GridView
+        android:id="@+id/fragment_gridview_data"
+        style="@style/matchmatch"
+        android:numColumns="2"
+        android:padding="5dp"
+        android:scrollbars="none" />
+
+<!--
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_gridview_data"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:scrollbars="none" />-->
+</cn.bingoogolapple.refreshlayout.BGARefreshLayout>

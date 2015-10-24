@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Albums</string>
+    <string name="bt_exit_guider">Enter the album</string>
+    <string name="tv_item_staggered_desc">Date</string>
+</resources>
