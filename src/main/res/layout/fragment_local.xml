@@ -1,21 +1,119 @@
-<cn.bingoogolapple.refreshlayout.BGARefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/fragment_gridview_refresh"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:albums="http://schemas.android.com/apk/res-auto"
     style="@style/matchmatch"
-    android:background="@color/color_black">
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DDFFFFFF"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/local_grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:numColumns="3"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip" />
+
+        <TextView
+            android:id="@+id/photo_num"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/def_content_view_textsize" />
+    </LinearLayout>-->
+
 
     <GridView
-        android:id="@+id/fragment_gridview_data"
-        style="@style/matchmatch"
-        android:numColumns="2"
-        android:padding="5dp"
-        android:scrollbars="none" />
-
-<!--
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/fragment_gridview_data"
+        android:id="@+id/local_grid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="5dp"
-        android:scrollbars="none" />-->
-</cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+        android:layout_weight="1.0"
+        android:numColumns="3"
+        android:paddingLeft="3dip"
+        android:paddingRight="3dip" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_black" />
+
+    <TextView
+        android:id="@+id/photo_num"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/def_content_view_textsize"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/bottom_container1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#BB0000FF"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btn_album"
+            style="@style/MMTabButton"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/album_unselect"
+            android:text="@string/album" />
+
+        <RadioButton
+            android:id="@+id/btn_local"
+            style="@style/MMTabButton"
+            android:layout_weight="1.0"
+            android:checked="true"
+            android:drawableTop="@drawable/local_unselect"
+            android:text="@string/local_photos" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/bottom_container2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#BB0000FF"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.android.magcomm.albums.view.ImageTextView
+            android:id="@+id/btn_share"
+            android:layout_width="0dip"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            albums:content_visible="false"
+            albums:dire="top"
+            albums:view_icon="@drawable/ic_share" />
+
+        <com.android.magcomm.albums.view.ImageTextView
+            android:id="@+id/btn_camera"
+            android:layout_width="0dip"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            albums:content_visible="false"
+            albums:dire="top"
+            albums:view_icon="@drawable/ic_camera" />
+
+        <com.android.magcomm.albums.view.ImageTextView
+            android:id="@+id/btn_delete"
+            android:layout_width="0dip"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            albums:content_visible="false"
+            albums:dire="top"
+            albums:view_icon="@drawable/ic_delete" />
+
+    </LinearLayout>
+</LinearLayout>

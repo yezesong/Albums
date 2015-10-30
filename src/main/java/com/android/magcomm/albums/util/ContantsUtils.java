@@ -7,8 +7,8 @@ import android.content.Context;
  * Created by lenovo on 15-10-24.
  */
 public class ContantsUtils {
-    public static final int THREAD_LIST_QUERY_TOKEN = 1701;
-    public static final int DELETE_CONVERSATION_TOKEN = 1702;
+    public static final int LIST_QUERY_TOKEN = 1701;
+    public static final int LIST_DELETE_TOKEN = 1702;
 
     public static class NewProgressDialog extends ProgressDialog {
         private boolean mIsDismiss = false;

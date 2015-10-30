@@ -37,7 +37,7 @@ public class GuiderActivity extends FragmentActivity {
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
             */
         }
-        setContentView(R.layout.activity_guider);
+        setContentView(R.layout.fragmnets_container);
         FragmentManager fm = getSupportFragmentManager();
 
         if (SharedPrefUtils.isFirstLaunch(this)) {
@@ -77,7 +77,7 @@ public class GuiderActivity extends FragmentActivity {
     public void onAttachFragment(Fragment fragment) {
         super.onAttachFragment(fragment);
 
-        if(fragment != null && fragment instanceof SplashFragment){
+        if (fragment != null && fragment instanceof SplashFragment) {
             mSplashFragment.mIvSplashAnim.setAnimationListener(animListener);
         }
     }

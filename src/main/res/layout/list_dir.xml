@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ddffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="7dip"
+        android:layout_marginTop="7dip"
+        android:text="@string/select_album"
+        android:textColor="#555"
+        android:textSize="32sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#555"
+        android:layout_height="1px"/>
+
+    <ListView
+        android:id="@+id/id_list_dir"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#555"
+        android:dividerHeight="1px" />
+</LinearLayout>

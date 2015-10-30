@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
     <string name="app_name">云相册</string>
     <string name="bt_exit_guider">进入相册</string>
+    <string name="no_mounted">暂无外部存储</string>
+    <string name="loading">正在加载...</string>
+    <string name="no_photos">没有图片</string>
+    <string name="select_album">图库选择</string>
+    <string name="all_photos">所有图片</string>
+    <string name="album">云相册</string>
+    <string name="select">选择</string>
+    <string name="cancel">取消</string>
+    <string name="local_photos">本地图库</string>
+    <string name="delete_those">删 除</string>
+    <string name="delete_cancel">取 消</string>
+    <string name="btn_share">分享至</string>
+
+    <string name="one_key_share">一键分享</string>
+    <string name="share_Album">上传云端</string>
+
+    <plurals name="confirm_delete">
+        <item quantity="one">"删除照片"</item>
+        <item quantity="other">"删除<xliff:g id="NUMBER">%1$s</xliff:g>张照片"</item>
+    </plurals>
 </resources>

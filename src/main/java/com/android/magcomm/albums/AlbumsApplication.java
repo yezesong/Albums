@@ -30,8 +30,6 @@ public class AlbumsApplication extends Application {
         //setStrictMode();
         super.onCreate();
         sInstance = this;
-        LocalImages.init(sInstance);
-
         mEngine = new Retrofit.Builder()
                 .baseUrl("http://7xk9dj.com1.z0.glb.clouddn.com/")
                         //https://raw.githubusercontent.com/bingoogolapple/BGABanner-Android/server/api/")

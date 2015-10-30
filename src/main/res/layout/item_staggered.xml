@@ -1,33 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.magcomm.albums.AlbumsLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fresco="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/iv_item_staggered_layout"
-    style="@style/matchwrap"
-    android:layout_margin="5dp"
-    android:padding="5dp">
+    style="@style/matchmatch"
+    android:layout_margin="3dp"
+    android:padding="3dp">
 
-    <!--<ImageView
-        android:id="@+id/iv_item_staggered_icon"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/staggered_holder" />-->
+        android:layout_height="100dp">
 
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/iv_item_staggered_icon"
-        android:layout_width="match_parent"
-        android:layout_height="100dip"
-        android:layout_centerHorizontal="true"
-        android:scaleType="centerCrop"
-        fresco:actualImageScaleType="focusCrop"
-        fresco:roundBottomLeft="false"
-        fresco:roundBottomRight="false"
-        fresco:roundedCornerRadius="5dp"
-        fresco:roundingBorderColor="#FC6853"
-        fresco:roundingBorderWidth="5dp" />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/id_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:background="@drawable/pictures_no"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundedCornerRadius="5dp"
+            fresco:roundingBorderColor="#FC6853"
+            fresco:roundingBorderWidth="5dp" />
+
+        <!--<ImageView
+            android:id="@+id/id_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pictures_no"
+            android:scaleType="centerCrop" />-->
+
+        <ImageButton
+            android:id="@+id/id_item_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:clickable="false"
+            android:src="@drawable/pictures_selected"
+            android:visibility="gone" />
+
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/tv_item_staggered_desc"
+        android:id="@+id/id_item_desc"
         style="@style/matchwrap"
         android:layout_gravity="bottom"
         android:background="#99cccccc"
@@ -36,4 +55,4 @@
         android:text="@string/tv_item_staggered_desc"
         android:textColor="@android:color/white"
         android:textSize="14sp" />
-</com.android.magcomm.albums.AlbumsLayout>
+</LinearLayout>

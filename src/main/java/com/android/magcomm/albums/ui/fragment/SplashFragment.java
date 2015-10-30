@@ -16,9 +16,7 @@ import android.widget.ImageView;
 import com.android.magcomm.albums.AlbumsApplication;
 import com.android.magcomm.albums.R;
 import com.android.magcomm.albums.engine.Engine;
-import com.android.magcomm.albums.model.AlbumsModel;
 import com.android.magcomm.albums.model.BannerModel;
-import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
 import java.util.Random;
@@ -68,28 +66,33 @@ public class SplashFragment extends Fragment {
     }
 
     private void reflash() {
-        mEngine.threeItemP().enqueue(new Callback<List<AlbumsModel>>() {
-            @Override
-            public void onResponse(Response<List<AlbumsModel>> response, Retrofit retrofit) {
-                if(response.body() == null){
-                    return;
-                }
 
-                List<AlbumsModel> albumsModels = response.body();
+        ivSplash.setBackgroundResource(R.drawable.bg_splash);
+
+        /*mEngine.threeItem().enqueue(new Callback<BannerModel>() {
+            @Override
+            public void onResponse(Response<BannerModel> response, Retrofit retrofit) {
+                //if (response.body() == null) {
+                //    return;
+                //}
+
+               *//* List<BannerModel> albumsModels = response.body();
                 int length = albumsModels.size();
                 Random random = new Random();
                 int index = random.nextInt(length);
-                Log.i(TAG, "random index is " + index);
+                Log.i(TAG, "random index is " + index);*//*
                 //SimpleDraweeView simpleDraweeView = (SimpleDraweeView) ivSplash;
                 //simpleDraweeView.setImageURI(Uri.parse(bannerModel.imgs.get(0)));
-                ivSplash.setImageURI(Uri.parse(albumsModels.get(index).toString()));
+                //ivSplash.setImageURI(Uri.parse(response.body().imgs.get(0)));
+
+                ivSplash.setBackgroundResource(R.drawable.bg_splash);
             }
 
             @Override
             public void onFailure(Throwable t) {
-
+                ivSplash.setBackgroundResource(R.drawable.bg_splash);
             }
-        });
+        });*/
     }
 
     @Override

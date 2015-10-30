@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="color_black">#AA000000</color>
+    <color name="color_pressed">#bbbbbbbb</color>
+    <color name="color_unpressed">#00ffffff</color>
+    <color name="color_white">#FFF</color>
+    <color name="color_unselect">#DDFFFFFF</color>
+    <color name="color_select">#C0FFFFFF</color>
+
+    <color name="color_blue">#EE0000FF</color>
+    <color name="color_red">#EEFF0000</color>
 </resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:album="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#BB0000FF"
+    android:orientation="horizontal">
+
+    <com.android.magcomm.albums.view.ImageTextView
+        android:id="@+id/id_back"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingBottom="15dip"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dip"
+        album:content="@string/album"
+        album:content_color="#DDFFFFFF"
+        album:dire="left"
+        album:view_icon="@drawable/image_text_icon" />
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="@string/local_photos"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/content_title_textsize" />
+
+    <!--<com.android.magcomm.albums.view.ImageTextView
+        android:id="@+id/id_select"
+        android:layout_width="90dp"
+        android:layout_height="10dp"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:paddingBottom="15dip"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dip"
+        album:content="@string/select"
+        album:content_color="#DDFFFFFF"
+        album:dire="right"
+        album:icon_visible="false" />-->
+
+    <TextView
+        android:id="@+id/id_select"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="right|center_vertical"
+        android:paddingRight="15dp"
+        android:text="@string/select"
+        android:textColor="@drawable/select_text_color"
+        android:textSize="20sp" />
+</LinearLayout>

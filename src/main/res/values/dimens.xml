@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="def_content_view_textsize">20sp</dimen>
+    <dimen name="content_title_textsize">22sp</dimen>
+    <dimen name="def_content_distance">3dp</dimen>
+    <dimen name="option_margin_r_l">25dp</dimen>
+    <dimen name="option_margin_t_b">12dp</dimen>
+    <dimen name="option_radius">8dp</dimen>
+</resources>

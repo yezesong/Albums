@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="content_visible" format="boolean"/>
+    <attr name="icon_visible" format="boolean" />
+    <attr name="content_color" format="color" />
+    <attr name="content_size" format="dimension" />
+    <attr name="content" format="string" />
+    <attr name="view_icon" format="reference" />
+    <attr name="view_dis" format="dimension" />
+    <attr name="dire">
+        <enum name="left" value="1" />
+        <enum name="top" value="2" />
+        <enum name="right" value="3" />
+        <enum name="bottom" value="4" />
+    </attr>
+
+    <declare-styleable name="ImageTextView">
+        <attr name="icon_visible" />
+        <attr name="content_visible" />
+        <attr name="content_color" />
+        <attr name="content_size" />
+        <attr name="content" />
+        <attr name="view_icon" />
+        <attr name="view_dis" />
+        <attr name="dire" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageTextButton">
+        <attr name="image_button_text" format="string" />
+        <attr name="image_button_textSize" format="dimension" />
+        <attr name="image_button_textColor" format="color" />
+        <attr name="image_button_icon" format="reference|color" />
+        <attr name="image_button_positon">
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+        <attr name="image_button_padding" format="integer" />
+        <attr name="button_left" format="reference|color"></attr>
+        <attr name="button_right" format="string"></attr>
+    </declare-styleable>
+</resources>
