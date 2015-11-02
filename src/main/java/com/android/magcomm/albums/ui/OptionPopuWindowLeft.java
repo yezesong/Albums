@@ -35,7 +35,14 @@ public class OptionPopuWindowLeft extends BasePopupWindowForListView {
         mShareAlbums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mOptionButtonClick.optionClick(v);
+            }
+        });
 
+        mShareOneKey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mOptionButtonClick.optionClick(v);
             }
         });
 

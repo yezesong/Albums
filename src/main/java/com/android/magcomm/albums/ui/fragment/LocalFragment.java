@@ -101,6 +101,7 @@ public class LocalFragment extends Fragment implements ImageTextView.ImageTextVi
             case R.id.id_back:
                 break;
             case R.id.btn_share:
+                onShareMenu();
                 break;
             case R.id.btn_camera:
                 Intent intent = new Intent(); //调用照相机
@@ -160,7 +161,18 @@ public class LocalFragment extends Fragment implements ImageTextView.ImageTextVi
 
     @Override
     public void optionClick(View view) {
+        Log.i(TAG, "optionClick is called and v'id = " + view.getId());
+        switch (view.getId()) {
+            case R.id.menu_share_album:
 
+                break;
+            case R.id.menu_share_onkey:
+
+                break;
+            case R.id.menu_delete:
+
+                break;
+        }
     }
 
 
@@ -241,7 +253,7 @@ public class LocalFragment extends Fragment implements ImageTextView.ImageTextVi
         View contentView = LayoutInflater.from(sActivity.getApplicationContext())
                 .inflate(R.layout.option_popuwindow_left, null);
 
-        mOptionPopuWindowLeft = new OptionPopuWindowLeft(contentView, (int) (mScreenWidth), (int) (mScreenHeight * 0.25));
+        mOptionPopuWindowLeft = new OptionPopuWindowLeft(contentView, (int) (mScreenWidth), (int) (mScreenHeight * 0.3));
 
         mOptionPopuWindowLeft.setOnDismissListener(new PopupWindow.OnDismissListener() {
 
@@ -486,6 +498,16 @@ public class LocalFragment extends Fragment implements ImageTextView.ImageTextVi
         }
         super.onDestroyView();
         Log.i(TAG, "onDestroyView is called ");
+    }
+
+    private void onShareMenu() {
+        mOptionPopuWindowLeft
+                .setAnimationStyle(R.style.anim_popup_option);
+        mOptionPopuWindowLeft.showAtLocation(mRootView, Gravity.BOTTOM, 0, 0);
+        // 设置背景颜色变暗
+        WindowManager.LayoutParams lp = sActivity.getWindow().getAttributes();
+        lp.alpha = 0.6f;
+        sActivity.getWindow().setAttributes(lp);
     }
 
     private void onDeleteMenu() {
